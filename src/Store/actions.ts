@@ -20,7 +20,6 @@ export class Actions {
       dispatch(photosActions.fetchPhotos_success(response.data));
     } catch (e) {
       const error = e.message.toString() || 'Oops, something went wrong!';
-      console.log(error, 'ece');
       dispatch(photosActions.fetchPhotos_error(error));
     }
   };

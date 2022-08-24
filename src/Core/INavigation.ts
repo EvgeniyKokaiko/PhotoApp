@@ -66,7 +66,7 @@ class INavigation {
       this._navigationStack.pop();
       this._currentScreen = lastPath;
     } catch (e) {
-      console.log(e);
+      console.log('INavigation.goBack ex', e);
     }
   };
 }
