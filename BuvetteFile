@@ -1,0 +1,1 @@
+@ANDROID: [npm run android]: {PATH="", PORT=19000}
