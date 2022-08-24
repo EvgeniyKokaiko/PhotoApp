@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f9e2e7fd-3add-4d21-a1a1-07ea8f25a8fe" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BuvetteFile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Assets/Icons/icons.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/FavoritesContainer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/PhotosContainer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Core/BottomNavigation.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Core/INavigation.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Core/MainNavigationScreen.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Hooks/navigation.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Hooks/redux.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Screens/FavoritesComponent.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Screens/PhotosComponent.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Store/actions.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Store/reducers/PhotosReducer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Store/store.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Styles/Buttons.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Styles/Images.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Styles/Inputs.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Styles/Layout.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Styles/MP.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Styles/ScreenStyles.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Styles/Texts.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Styles/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Types/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Types/models.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Utilities/Colors.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Utilities/Layouts.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/View/BaseHeaderView.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/View/EmptyView.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/View/PhotoItemView.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/View/PreloaderView.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/View/TextBox.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PettersonTestApplication.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package.json" />
+        <option value="JavaScript File" />
+        <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" url="file://C:/Program Files/Go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2DiK8u0eumWGd5hYqE5sboiQOKd" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "go.import.settings.migrated": "true",
+    "go.sdk.automatically.set": "true",
+    "last_opened_file_path": "D:/Development/PettersonTestApplication",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2022.1.2\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Development\PettersonTestApplication" />
+      <recent name="D:\Development\PettersonTestApplication\src" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f9e2e7fd-3add-4d21-a1a1-07ea8f25a8fe" name="Changes" comment="" />
+      <created>1661176311761</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1661176311761</updated>
+      <workItem from="1661176313291" duration="795000" />
+      <workItem from="1661274416347" duration="8935000" />
+      <workItem from="1661283595074" duration="204000" />
+      <workItem from="1661283832027" duration="544000" />
+      <workItem from="1661284433526" duration="6076000" />
+      <workItem from="1661293208342" duration="8015000" />
+      <workItem from="1661348609035" duration="4687000" />
+      <workItem from="1661353347207" duration="40000" />
+      <workItem from="1661353395501" duration="63000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VgoProject">
+    <settings-migrated>true</settings-migrated>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

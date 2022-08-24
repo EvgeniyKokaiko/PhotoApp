@@ -1,2 +1,0 @@
-# PhotoApp
- Mobile application.

@@ -1,11 +1,11 @@
 import { StyleSheet } from 'react-native';
-import { DEVICE_WIDTH, mockupHeightToDP, mockupWidthToDP } from '../Utilities/Layouts';
+import {DEVICE_HEIGHT, DEVICE_WIDTH, mockupHeightToDP, mockupWidthToDP} from '../Utilities/Layouts';
 import { Colors } from '../Utilities/Colors';
 
 export const ScreenStyles = StyleSheet.create({
   BottomNavigationContainer: {
     width: DEVICE_WIDTH,
-    height: mockupHeightToDP(60),
+    height: mockupHeightToDP(50),
     flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'center',
@@ -34,9 +34,10 @@ export const ScreenStyles = StyleSheet.create({
   },
   preloaderContainer: {
     position: 'absolute',
-    top: mockupHeightToDP(104),
+    top: mockupHeightToDP(110),
     width: DEVICE_WIDTH,
-    height: '100%',
-    backgroundColor: 'white',
+    height: DEVICE_HEIGHT,
+    backgroundColor: 'transparent',
+    zIndex: 999,
   },
 });

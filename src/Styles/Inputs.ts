@@ -11,4 +11,7 @@ export const Inputs = StyleSheet.create({
     marginVertical: mockupHeightToDP(15),
     borderRadius: 10,
   },
+  searchInput: {
+    width: '90%',
+  },
 });

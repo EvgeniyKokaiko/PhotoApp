@@ -1,5 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { PhotoModel } from '../../Types/models';
+import { persistReducer } from 'redux-persist';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export type photoInitialStateType = { lastFetched: string; items: PhotoModel[]; isLoading: boolean; isError: boolean; favorites: PhotoModel[] };
 
@@ -20,8 +22,7 @@ const PhotosReducer = createSlice({
       state.lastFetched = new Date().toString();
     },
     fetchPhotos_success(state, action) {
-      const filterFavorites = action.payload.filter((item: PhotoModel) => state.favorites.findIndex((favItem) => favItem.id === item.id) === -1);
-      state.items = filterFavorites;
+      state.items = action.payload.filter((item: PhotoModel) => state.favorites.findIndex((favItem) => favItem.id === item.id) === -1);
       state.isLoading = false;
       state.isError = false;
     },
@@ -45,6 +46,13 @@ const PhotosReducer = createSlice({
 });
 
 const photosActions = PhotosReducer.actions;
-const photosReducer = PhotosReducer.reducer;
+
+const photoReducerPersistConfig = {
+  key: 'photos',
+  storage: AsyncStorage,
+  whitelist: ['favorites', 'lastFetched'],
+};
+
+const photosReducer = persistReducer(photoReducerPersistConfig, PhotosReducer.reducer);
 
 export { photosActions, photosReducer };

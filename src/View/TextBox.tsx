@@ -1,4 +1,4 @@
-import { ImageSourcePropType, TextInput, View, Image } from 'react-native';
+import { TextInput, View, Image } from 'react-native';
 import React from 'react';
 import { STYLES } from '../Styles';
 import { ICONS } from '../Assets/Icons/icons';
@@ -42,7 +42,7 @@ const TextBox: React.FC<FormTextBoxProps> = (props: FormTextBoxProps): JSX.Eleme
   const containerStyles = props.style?.container !== void 0 ? props.style.container : {};
   const inputStyles = props.style?.input !== void 0 ? props.style.input : {};
   return (
-    <View style={[STYLES.Layout.flex_row, STYLES.Layout.ai_c, containerStyles]}>
+    <View style={[STYLES.Layout.flex_row, STYLES.Layout.ai_c, containerStyles, STYLES.MP.pr20]}>
       {props.leftIcon && <Image style={[STYLES.Images.image20, STYLES.MP.mh10]} source={ICONS.searchPane} />}
       <TextInput
         style={inputStyles}

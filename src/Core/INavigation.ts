@@ -11,6 +11,12 @@ export type RootStackParamList = {
   PhotosContainer: {};
 };
 
+/***
+ *
+ * Own navigation realization which get ref of navigation from NavigationContainer in root component.
+ *
+ */
+
 class INavigation {
   private readonly _navigationStack: Array<NavigationState>;
   private _currentScreen: NavigationState;

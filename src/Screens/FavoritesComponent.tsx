@@ -5,7 +5,6 @@ import { PhotoItemView } from '../View/PhotoItemView';
 import { PhotoModel } from '../Types/models';
 import { DefaultFlatListType } from '../Types';
 import { FormTextBoxProps, TextBox } from '../View/TextBox';
-import { BaseHeaderView } from '../View/BaseHeaderView';
 import { EmptyView } from '../View/EmptyView';
 
 export type favoritesComponentProps = {
@@ -21,8 +20,7 @@ const FavoritesComponent: React.FC<favoritesComponentProps> = ({ formBoxProperti
   };
 
   return (
-    <View style={STYLES.Layout.container}>
-      <BaseHeaderView label={'Favorites'} />
+    <View style={[STYLES.Layout.container, STYLES.MP.ph15]}>
       <View>
         <TextBox {...formBoxProperties} />
       </View>

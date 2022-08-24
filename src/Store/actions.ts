@@ -2,7 +2,6 @@ import axios from 'axios';
 import { photosActions } from './reducers/PhotosReducer';
 import { AppDispatch } from './store';
 import { PhotoModel } from '../Types/models';
-import { AnyAction } from 'redux';
 
 export class Actions {
   private readonly _apiURL: string;
@@ -18,7 +17,9 @@ export class Actions {
     try {
       dispatch(photosActions.fetchPhotos());
       const response = await axios.get<PhotoModel[]>(`${this.apiURL}photos?albumId=1`);
-      dispatch(photosActions.fetchPhotos_success(response.data));
+      setTimeout(() => {
+        dispatch(photosActions.fetchPhotos_success(response.data));
+      }, 10000);
     } catch (e) {
       const error = e.message.toString() || 'Oops, something went wrong!';
       console.log(error, 'ece');

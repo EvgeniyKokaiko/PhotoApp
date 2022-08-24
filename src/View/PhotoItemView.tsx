@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { TouchableOpacity, View, Image, Text } from 'react-native';
 import { STYLES } from '../Styles';
 import { PhotoModel } from '../Types/models';
-import { useAppDispatch, useCombinedRedux } from '../Hooks/redux';
+import { useAppDispatch } from '../Hooks/redux';
 import { ICONS } from '../Assets/Icons/icons';
 import { photosActions } from '../Store/reducers/PhotosReducer';
 
@@ -12,7 +12,6 @@ type photoItemViewProps = {
 };
 
 const PhotoItemView: React.FC<photoItemViewProps> = ({ model, isFilled }) => {
-  const [getState, setState] = useState<any>({});
   const dispatch = useAppDispatch();
   const onLikePress = () => {
     dispatch(photosActions.manage_favorites(model));

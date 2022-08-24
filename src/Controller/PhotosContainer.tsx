@@ -4,7 +4,7 @@ import PhotosComponent, { photosComponentProps } from '../Screens/PhotosComponen
 import { FormTextBoxProps } from '../View/TextBox';
 import { STYLES } from '../Styles';
 import { useOnFocus } from '../Hooks/navigation';
-import {actionImpl, Actions} from '../Store/actions';
+import { actionImpl } from '../Store/actions';
 import { useCombinedRedux } from '../Hooks/redux';
 import { PhotoModel } from '../Types/models';
 
@@ -26,11 +26,10 @@ const PhotosContainer: React.FC<photosContainerProps> = () => {
     debounced: true,
     onChange: onSearch,
     maxLength: 500,
-    multiline: true,
     placeholder: 'Search...',
     style: {
       container: [STYLES.Inputs.searchInputContainer],
-      input: [],
+      input: [STYLES.Inputs.searchInput],
     },
     leftIcon: true,
   };

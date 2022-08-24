@@ -5,6 +5,7 @@ import { PhotosContainer } from '../Controller/PhotosContainer';
 import { FavoritesContainer } from '../Controller/FavoritesContainer';
 import { BottomNavigation } from './BottomNavigation';
 import { RootStackParamList } from './INavigation';
+import { BaseHeaderView } from '../View/BaseHeaderView';
 
 export enum StackScreens {
   favoritesScreen = 'FavoritesContainer',
@@ -19,12 +20,18 @@ const MainNavigationScreen = () => {
     {
       name: StackScreens.photosScreen,
       component: PhotosContainer,
-      options: { headerShown: false },
+      options: {
+        headerShown: true,
+        header: () => <BaseHeaderView label="Photos" />,
+      },
     },
     {
       name: StackScreens.favoritesScreen,
       component: FavoritesContainer,
-      options: { headerShown: false },
+      options: {
+        headerShown: true,
+        header: () => <BaseHeaderView label="Favorites" />,
+      },
     },
   ];
 
