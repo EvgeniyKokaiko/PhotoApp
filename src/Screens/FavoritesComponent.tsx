@@ -20,22 +20,25 @@ const FavoritesComponent: React.FC<favoritesComponentProps> = ({ formBoxProperti
   };
 
   return (
-    <View style={[STYLES.Layout.container, STYLES.MP.ph15]}>
-      <View>
-        <TextBox {...formBoxProperties} />
+    <>
+      <View style={[STYLES.Layout.container, STYLES.MP.ph15]}>
+        <View>
+          <TextBox {...formBoxProperties} />
+        </View>
+        <View style={[STYLES.MP.mb_bottomNavigation]}>
+          <FlatList
+            nestedScrollEnabled={true}
+            numColumns={1}
+            horizontal={false}
+            bounces={true}
+            ListEmptyComponent={<EmptyView message={'No Favorite Items!'} />}
+            data={isSearch ? filteredItems : favorites}
+            renderItem={_renderItem}
+            keyExtractor={(item, index) => index.toString()}
+          />
+        </View>
       </View>
-      <View style={[STYLES.MP.mb_bottomNavigation]}>
-        <FlatList
-          numColumns={1}
-          horizontal={false}
-          bounces={true}
-          ListEmptyComponent={<EmptyView message={'No Favorite Items!'} />}
-          data={isSearch ? filteredItems : favorites}
-          renderItem={_renderItem}
-          keyExtractor={(item, index) => index.toString()}
-        />
-      </View>
-    </View>
+    </>
   );
 };
 

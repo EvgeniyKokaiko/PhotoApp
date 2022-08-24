@@ -33,7 +33,7 @@ const TextBox: React.FC<FormTextBoxProps> = (props: FormTextBoxProps): JSX.Eleme
       }
       timer = setTimeout(async () => {
         props.onChange && props.onChange(value);
-      }, 300);
+      }, 600);
     } else {
       props.onChange && props.onChange(value);
     }

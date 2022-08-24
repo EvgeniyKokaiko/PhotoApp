@@ -34,7 +34,8 @@ const FavoritesContainer: React.FC<favoritesContainerProps> = () => {
     if (inputValue.trim() === '') {
       setState({ ...getState, isSearch: false, filteredItems: [] });
     } else {
-      const filteredItems = favorites.filter((model: PhotoModel) => model.title.startsWith(inputValue, 0));
+      const normalizedInput = inputValue.trim().toLowerCase();
+      const filteredItems = favorites.filter((model: PhotoModel) => model.title.startsWith(normalizedInput, 0));
       setState({ ...getState, isSearch: true, filteredItems: filteredItems });
     }
   }

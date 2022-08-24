@@ -38,7 +38,8 @@ const PhotosContainer: React.FC<photosContainerProps> = () => {
     if (inputValue.trim() === '') {
       setState({ ...getState, isSearch: false, filteredItems: [] });
     } else {
-      const filteredItems = selector.items.filter((model: PhotoModel) => model.title.startsWith(inputValue, 0));
+      const normalizedInput = inputValue.trim().toLowerCase();
+      const filteredItems = selector.items.filter((model: PhotoModel) => model.title.startsWith(normalizedInput, 0));
       setState({ ...getState, isSearch: true, filteredItems: filteredItems });
     }
   }

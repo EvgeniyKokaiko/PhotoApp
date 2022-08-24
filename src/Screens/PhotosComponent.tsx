@@ -31,6 +31,7 @@ const PhotosComponent: React.FC<photosComponentProps> = ({ formBoxProperties, da
         </View>
         <View style={[STYLES.MP.mb_bottomNavigation]}>
           <FlatList
+            nestedScrollEnabled={true}
             refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} />}
             numColumns={1}
             horizontal={false}
