@@ -17,9 +17,7 @@ export class Actions {
     try {
       dispatch(photosActions.fetchPhotos());
       const response = await axios.get<PhotoModel[]>(`${this.apiURL}photos?albumId=1`);
-      setTimeout(() => {
-        dispatch(photosActions.fetchPhotos_success(response.data));
-      }, 10000);
+      dispatch(photosActions.fetchPhotos_success(response.data));
     } catch (e) {
       const error = e.message.toString() || 'Oops, something went wrong!';
       console.log(error, 'ece');
