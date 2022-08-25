@@ -2,20 +2,20 @@ import React from 'react';
 import { View, FlatList } from 'react-native';
 import { STYLES } from '../Styles';
 import { PhotoItemView } from '../View/PhotoItemView';
-import { PhotoModel } from '../Types/models';
+import {OwnPhotoModel, PhotoModel} from '../Types/models';
 import { DefaultFlatListType } from '../Types';
 import { FormTextBoxProps, TextBox } from '../View/TextBox';
 import { EmptyView } from '../View/EmptyView';
 
 export type favoritesComponentProps = {
   formBoxProperties: FormTextBoxProps;
-  favorites: PhotoModel[];
+  favorites: OwnPhotoModel[];
   isSearch: boolean;
-  filteredItems: Array<PhotoModel>;
+  filteredItems: Array<OwnPhotoModel>;
 };
 
 const FavoritesComponent: React.FC<favoritesComponentProps> = ({ formBoxProperties, favorites, isSearch, filteredItems }) => {
-  const _renderItem = ({ item }: DefaultFlatListType<PhotoModel>) => {
+  const _renderItem = ({ item }: DefaultFlatListType<OwnPhotoModel>) => {
     return <PhotoItemView isFilled={true} model={item} />;
   };
 

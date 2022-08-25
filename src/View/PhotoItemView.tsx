@@ -1,13 +1,14 @@
 import React from 'react';
 import { TouchableOpacity, View, Image, Text } from 'react-native';
 import { STYLES } from '../Styles';
-import { PhotoModel } from '../Types/models';
+import { OwnPhotoModel } from '../Types/models';
 import { useAppDispatch } from '../Hooks/redux';
 import { ICONS } from '../Assets/Icons/icons';
 import { photosActions } from '../Store/reducers/PhotosReducer';
+import { Constants } from '../Utilities/Constants';
 
 type photoItemViewProps = {
-  model: PhotoModel;
+  model: OwnPhotoModel;
   isFilled: boolean;
 };
 
@@ -15,6 +16,13 @@ const PhotoItemView: React.FC<photoItemViewProps> = ({ model, isFilled }) => {
   const dispatch = useAppDispatch();
   const onLikePress = () => {
     dispatch(photosActions.manage_favorites(model));
+  };
+
+  const photoUrl = (): string => {
+    if (!(model.thumbnail.startsWith('http://') || model.thumbnail.startsWith('https://'))) {
+      return `${Constants.API_URL}static/${model.thumbnail}`;
+    }
+    return model.thumbnail;
   };
 
   /***
@@ -28,7 +36,7 @@ const PhotoItemView: React.FC<photoItemViewProps> = ({ model, isFilled }) => {
         <Text style={[STYLES.Texts.PhotoItemCaption]}>Caption: {model.title}</Text>
       </View>
       <View>
-        <Image style={STYLES.Images.photoItemImage} source={{ uri: model.url }} />
+        <Image style={STYLES.Images.photoItemImage} source={{ uri: photoUrl() }} />
       </View>
       <View style={[STYLES.Layout.jc_fe, STYLES.Layout.flex_row, STYLES.MP.mt10, STYLES.MP.mb20]}>
         <TouchableOpacity

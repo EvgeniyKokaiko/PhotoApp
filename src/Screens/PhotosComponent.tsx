@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, FlatList, RefreshControl } from 'react-native';
 import { DefaultFlatListType, photoInitialStateType } from '../Types';
-import { PhotoModel } from '../Types/models';
+import { OwnPhotoModel } from '../Types/models';
 import { PhotoItemView } from '../View/PhotoItemView';
 import { STYLES } from '../Styles';
 import { FormTextBoxProps, TextBox } from '../View/TextBox';
@@ -14,11 +14,11 @@ export type photosComponentProps = {
   onRefresh(): void;
   refreshing: boolean;
   isSearch: boolean;
-  filteredItems: Array<PhotoModel>;
+  filteredItems: Array<OwnPhotoModel>;
 };
 
 const PhotosComponent: React.FC<photosComponentProps> = ({ formBoxProperties, data, refreshing, onRefresh, isSearch, filteredItems }) => {
-  const _renderItem = ({ item }: DefaultFlatListType<PhotoModel>) => {
+  const _renderItem = ({ item }: DefaultFlatListType<OwnPhotoModel>) => {
     return <PhotoItemView isFilled={false} model={item} />;
   };
   return (

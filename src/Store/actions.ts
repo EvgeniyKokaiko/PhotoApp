@@ -1,7 +1,8 @@
 import axios from 'axios';
 import { photosActions } from './reducers/PhotosReducer';
 import { AppDispatch } from './store';
-import { PhotoModel } from '../Types/models';
+import { OwnPhotoModel, TypedResponse } from '../Types/models';
+import { Constants } from '../Utilities/Constants';
 
 /**
  *
@@ -20,8 +21,8 @@ export class Actions {
   public fetchPhotos: any = () => async (dispatch: AppDispatch) => {
     try {
       dispatch(photosActions.fetchPhotos());
-      const response = await axios.get<PhotoModel[]>(`${this.apiURL}photos?albumId=1`);
-      dispatch(photosActions.fetchPhotos_success(response.data));
+      const response = await axios.get<TypedResponse<OwnPhotoModel[]>>(`${this.apiURL}posts/get`);
+      dispatch(photosActions.fetchPhotos_success(response.data.data));
     } catch (e) {
       const error = e.message.toString() || 'Oops, something went wrong!';
       dispatch(photosActions.fetchPhotos_error(error));
@@ -29,4 +30,5 @@ export class Actions {
   };
 }
 
-export const actionImpl = new Actions('https://jsonplaceholder.typicode.com/');
+// 'https://jsonplaceholder.typicode.com/' - default api
+export const actionImpl = new Actions(Constants.API_URL);

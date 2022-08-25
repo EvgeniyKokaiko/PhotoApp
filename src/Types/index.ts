@@ -1,5 +1,5 @@
 import { StackScreens } from '../Core/MainNavigationScreen';
-import { PhotoModel } from './models';
+import {OwnPhotoModel, PhotoModel} from './models';
 
 export type Screen = {
   name: StackScreens;
@@ -16,8 +16,8 @@ export type DefaultFlatListType<T> = {
 
 export type photoInitialStateType = {
   lastFetched: string;
-  items: PhotoModel[];
+  items: OwnPhotoModel[];
   isLoading: boolean;
   isError: boolean;
-  favorites: PhotoModel[];
+  favorites: OwnPhotoModel[];
 };
