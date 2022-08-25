@@ -3,7 +3,7 @@ import { mockupHeightToDP, mockupWidthToDP } from '../Utilities/Layouts';
 
 export const MP = StyleSheet.create({
   mb_bottomNavigation: {
-    paddingBottom: '40%',
+    paddingBottom: '30%',
   },
   mb10: {
     marginBottom: mockupHeightToDP(10),
