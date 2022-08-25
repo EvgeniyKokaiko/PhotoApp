@@ -17,6 +17,10 @@ const PhotoItemView: React.FC<photoItemViewProps> = ({ model, isFilled }) => {
     dispatch(photosActions.manage_favorites(model));
   };
 
+  /***
+   * Component of single post
+   *
+   */
   return (
     <View style={[STYLES.MP.mb20]}>
       <View style={[STYLES.Layout.flex_row, STYLES.Layout.jc_sb, STYLES.MP.mb10]} />

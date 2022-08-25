@@ -1,11 +1,10 @@
 import React from 'react';
 import { View, FlatList, RefreshControl } from 'react-native';
-import { DefaultFlatListType } from '../Types';
+import { DefaultFlatListType, photoInitialStateType } from '../Types';
 import { PhotoModel } from '../Types/models';
 import { PhotoItemView } from '../View/PhotoItemView';
 import { STYLES } from '../Styles';
 import { FormTextBoxProps, TextBox } from '../View/TextBox';
-import { photoInitialStateType } from '../Store/reducers/PhotosReducer';
 import { EmptyView } from '../View/EmptyView';
 import PreloaderView from '../View/PreloaderView';
 

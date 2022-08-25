@@ -6,6 +6,11 @@ import { MP } from './MP';
 import { Texts } from './Texts';
 import { Inputs } from './Inputs';
 
+/**
+ * Style properties composition, which a very useful inside a big components
+ * Example: STYLES.Layout.jc_sb
+ */
+
 export const STYLES = {
   ScreenStyles,
   Layout,

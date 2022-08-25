@@ -1,5 +1,10 @@
 import { Dimensions, PixelRatio, Platform, StatusBar } from 'react-native';
 
+/***
+ *
+ * Useful constants, functions for markup
+ *
+ */
 export const DEVICE_WIDTH = Dimensions.get('window').width;
 export const DEVICE_HEIGHT = Dimensions.get('window').height;
 

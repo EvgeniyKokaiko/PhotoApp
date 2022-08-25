@@ -14,7 +14,7 @@ export type RootStackParamList = {
 /***
  *
  * Own navigation realization which get ref of navigation from NavigationContainer in root component.
- *
+ *  Can be customizable for different purposes
  */
 
 class INavigation {

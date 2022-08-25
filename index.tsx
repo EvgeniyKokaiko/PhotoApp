@@ -13,14 +13,18 @@ export default function RegisterApplication() {
   const asyncPersistor = persistStore(store);
 
   return (
-    <NavigationContainer ref={mNavigator.navigator}>
-      <Provider store={store}>
+    <Provider store={store}>
+      <NavigationContainer ref={mNavigator.navigator}>
         <PersistGate loading={null} persistor={asyncPersistor}>
           <App />
         </PersistGate>
-      </Provider>
-    </NavigationContainer>
+      </NavigationContainer>
+    </Provider>
   );
 }
+
+/**
+ * Root registration of component was changed from expo to this component
+ */
 
 registerRootComponent(RegisterApplication);

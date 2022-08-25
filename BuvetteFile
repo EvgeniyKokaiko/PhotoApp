@@ -1,1 +1,6 @@
+# BuvetteFile - task manager with hot-reload written on Go.
+
+# PATH - specify folder after path with this file
+# PORT - specify a port of application which use to kill this port on restarting.
+
 @ANDROID: [npm run android]: {PATH="", PORT=19000}

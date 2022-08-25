@@ -10,6 +10,11 @@ import { AppDispatch, RootState } from '../Store/store';
 export const useAppDispatch = () => useDispatch<AppDispatch>();
 export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
 
+/**
+ * Useful shortcut hook for dispatch/selector of redux
+ *
+ */
+
 export const useCombinedRedux = (key: keyof RootState) => {
   const dispatch = useAppDispatch();
   const selector = useAppSelector((state) => state[key]);

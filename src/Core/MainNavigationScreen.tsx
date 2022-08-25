@@ -12,6 +12,12 @@ export enum StackScreens {
   photosScreen = 'PhotosContainer',
 }
 
+/***
+ *
+ * Root navigation component with comfortable construction
+ *
+ */
+
 const MainNavigationScreen = () => {
   const defaultRouteName = StackScreens.photosScreen;
   const withoutBottomNavigationScreens: Array<StackScreens> = [];
@@ -34,11 +40,18 @@ const MainNavigationScreen = () => {
       },
     },
   ];
-
+  /**
+   * Here instead of Tab.Navigator we can use Stack Navigator or Drawer Navigation
+   */
   return (
     <Tab.Navigator
       initialRouteName={defaultRouteName}
       tabBar={({ navigation }) => {
+        /***
+         *
+         * Here is a conditional, where we can specify inside withoutBottomNavigationScreens array, screens which does not use bottom navigation
+         *
+         */
         const { index, routeNames } = navigation.getState();
         const currentScreen = routeNames[index];
         if (withoutBottomNavigationScreens.includes(currentScreen as StackScreens)) {

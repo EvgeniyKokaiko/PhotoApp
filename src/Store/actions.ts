@@ -3,6 +3,10 @@ import { photosActions } from './reducers/PhotosReducer';
 import { AppDispatch } from './store';
 import { PhotoModel } from '../Types/models';
 
+/**
+ *
+ * Singleton class realization of asynchronous action creators
+ */
 export class Actions {
   private readonly _apiURL: string;
   constructor(apiURL: string) {

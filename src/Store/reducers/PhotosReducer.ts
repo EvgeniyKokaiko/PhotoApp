@@ -2,8 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 import { PhotoModel } from '../../Types/models';
 import { persistReducer } from 'redux-persist';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-
-export type photoInitialStateType = { lastFetched: string; items: PhotoModel[]; isLoading: boolean; isError: boolean; favorites: PhotoModel[] };
+import { photoInitialStateType } from '../../Types';
 
 const photosInitialState: photoInitialStateType = {
   lastFetched: '',
@@ -12,7 +11,16 @@ const photosInitialState: photoInitialStateType = {
   favorites: [],
   isError: false,
 };
-
+/**
+ * Main reducer of posts inside an application
+ * Algorithm:
+ * 1.When we enter an application, we are try to fetch data from api, then, if status equal 200 and no errors
+ * we will start to filter posts payload and search items by id, which contains inside favorites array,
+ * 2. If we are on Photos Screen, and press like button on specific post, we will remove this item from actual screen, and add it to favorites,
+ * 3. If we are on Favorites Screen, and press dislike button on specific post, we will remove this item from actual screen, but don't push it inside photos array,
+ * because if we will navigate to Photos Screen, we will catch a onFocus event, which will try to refetch all posts
+ * 4.Array of favorite posts are store inside AsyncStorage by Redux-persist
+ */
 const PhotosReducer = createSlice({
   name: 'photosReducer',
   reducers: {
