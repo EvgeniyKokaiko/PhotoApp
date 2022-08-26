@@ -4,10 +4,10 @@ import FavoritesComponent, { favoritesComponentProps } from '../Screens/Favorite
 import { FormTextBoxProps } from '../View/TextBox';
 import { STYLES } from '../Styles';
 import { useAppSelector } from '../Hooks/redux';
-import { PhotoModel } from '../Types/models';
+import { OwnPhotoModel } from '../Types/models';
 
 type favoritesContainerState = {
-  filteredItems: Array<PhotoModel>;
+  filteredItems: Array<OwnPhotoModel>;
   isSearch: boolean;
 };
 type favoritesContainerProps = {};
@@ -35,7 +35,7 @@ const FavoritesContainer: React.FC<favoritesContainerProps> = () => {
       setState({ ...getState, isSearch: false, filteredItems: [] });
     } else {
       const normalizedInput = inputValue.trim().toLowerCase();
-      const filteredItems = favorites.filter((model: PhotoModel) => model.title.startsWith(normalizedInput, 0));
+      const filteredItems = favorites.filter((model: OwnPhotoModel) => model.title.startsWith(normalizedInput, 0));
       setState({ ...getState, isSearch: true, filteredItems: filteredItems });
     }
   }

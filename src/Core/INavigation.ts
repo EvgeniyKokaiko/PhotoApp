@@ -42,11 +42,6 @@ class INavigation {
     if (this._navigator.isReady()) {
       this._navigationStack.push({ path, props });
       this._currentScreen = { path, props };
-      /***
-       *
-       * FIX TYPES HERE!
-       *
-       */
       this._navigator.navigate(path as never, props as never);
     }
   };
@@ -57,11 +52,6 @@ class INavigation {
         return;
       }
       let lastPath = this._navigationStack[this._navigationStack.length - 2];
-      /***
-       *
-       * FIX TYPES HERE!
-       *
-       */
       this._navigator.navigate(lastPath.path as never, lastPath.props as never);
       this._navigationStack.pop();
       this._currentScreen = lastPath;

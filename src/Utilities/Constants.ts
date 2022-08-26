@@ -1,3 +1,3 @@
 export const Constants = {
-  API_URL: 'http://192.168.1.90:8080/api/',
+  API_URL: 'http://ec2-3-67-79-39.eu-central-1.compute.amazonaws.com:8080/api/',
 };

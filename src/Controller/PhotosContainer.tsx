@@ -6,11 +6,11 @@ import { STYLES } from '../Styles';
 import { useOnFocus } from '../Hooks/navigation';
 import { actionImpl } from '../Store/actions';
 import { useCombinedRedux } from '../Hooks/redux';
-import { PhotoModel } from '../Types/models';
+import { OwnPhotoModel } from '../Types/models';
 
 type photosContainerState = {
   isRefresh: boolean;
-  filteredItems: Array<PhotoModel>;
+  filteredItems: Array<OwnPhotoModel>;
   isSearch: boolean;
 };
 type photosContainerProps = {};
@@ -39,7 +39,7 @@ const PhotosContainer: React.FC<photosContainerProps> = () => {
       setState({ ...getState, isSearch: false, filteredItems: [] });
     } else {
       const normalizedInput = inputValue.trim().toLowerCase();
-      const filteredItems = selector.items.filter((model: PhotoModel) => model.title.startsWith(normalizedInput, 0));
+      const filteredItems = selector.items.filter((model: OwnPhotoModel) => model.title.startsWith(normalizedInput, 0));
       setState({ ...getState, isSearch: true, filteredItems: filteredItems });
     }
   }
