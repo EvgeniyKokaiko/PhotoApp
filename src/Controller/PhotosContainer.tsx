@@ -34,6 +34,9 @@ const PhotosContainer: React.FC<photosContainerProps> = () => {
     leftIcon: true,
   };
 
+  /**
+   * Search method of component, which make a substitution of state from redux store to component state in moment when input value is not empty
+   */
   function onSearch(inputValue: string) {
     if (inputValue.trim() === '') {
       setState({ ...getState, isSearch: false, filteredItems: [] });
