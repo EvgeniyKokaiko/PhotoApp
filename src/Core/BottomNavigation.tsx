@@ -12,7 +12,10 @@ type bottomNavigationButtonType = {
   icon: ImageSourcePropType;
   props: any;
 };
-
+/***
+ *
+ * Own bottom navigation with comfortable structure
+ */
 export const BottomNavigation: React.FC<bottomNavigationProps> = () => {
   const buttons: Array<bottomNavigationButtonType> = [
     {

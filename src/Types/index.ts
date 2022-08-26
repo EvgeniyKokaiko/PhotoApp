@@ -1,5 +1,5 @@
 import { StackScreens } from '../Core/MainNavigationScreen';
-import {OwnPhotoModel, PhotoModel} from './models';
+import { OwnPhotoModel } from './models';
 
 export type Screen = {
   name: StackScreens;
